@@ -9,3 +9,4 @@ The files has been made using ATOM file editor and executed in **Linux Terminal*
 ## LIST OF FOLDERS
   1. [Basic Syntax and Commands](https://github.com/madhur3u/python3/tree/main/Basic%20Syntax%20and%20Commands)
   2. [Basic File Handling](https://github.com/madhur3u/python3/tree/main/Basic%20File%20Handling)
+  3. [Functions](https://github.com/madhur3u/python3/tree/main/Functions)
