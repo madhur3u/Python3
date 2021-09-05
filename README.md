@@ -11,3 +11,4 @@ The files has been made using ATOM file editor and executed in **Linux Terminal*
   2. [Basic File Handling](https://github.com/madhur3u/python3/tree/main/Basic%20File%20Handling)
   3. [Functions](https://github.com/madhur3u/python3/tree/main/Functions)
   4. [Encoding](https://github.com/madhur3u/python3/tree/main/Encoding)
+  5. [Conditionals and Loops](https://github.com/madhur3u/Python3/tree/main/Conditionals%20and%20Loops)
