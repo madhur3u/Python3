@@ -74,6 +74,8 @@ LIST COMPREHENSION
 
     odd = [x for x in range(20) if x % 2 == 1]      this make a list of odd numbers before 20
 
+    print ([[a,b,c] for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1) if a + b + c != n ]) using multiple for loops
+
 CHECKING AN ELEMENT IN LIST
 
     print(3 in s)                       Returns true or false depends on if element is in list or not
@@ -145,3 +147,18 @@ TUPLES IN PYTHON
     cmp(tuple1, tuple2)             cmp is used to compare tuples return 0 or 1
     max(s)  |  min(s)
 
+LIST TO SET AND V.V.
+    
+    a = [1,1,1,2,2,2,3,4,5,6,7,7,8]
+    a = set(a)                          to remove repeated element from list we can convert it into set
+    a = list(a)                         set cannot be accessed so to use it again convert again to list
+    a = list(set(a))                    one liner
+
+USE OF SORTED AND SETS
+
+    a = [10,12,78,2,3,4,5,6,7,8,9,3,3,3,1,1,1,5,5,5,0]
+    b = {2,4,5,6,2,4,7,3,5}
+
+    x = sorted(b)                                       the set b will be converted to list and sorted and stored in x
+    x = sorted(b, reverse=True)                         set b conv to list sorted in reverse and stored in x
+    print(x)
