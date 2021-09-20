@@ -1,0 +1,147 @@
+LISTS IN PYTHON
+    s = ['hi' , 'hello' , 'heya']   string list
+    s = ['hi' , 1 , 2 , 3.5]        mixed list with more than one data type
+    s = [1, 2, 3, 4, 5, 6]          numeric or int list
+
+    s[1] , s[2*2]                   accessing list [only integers can be used for indexing]
+    s[1:5] , s[1:6:2]               list slicing
+
+    s = [ [1, 2] , [3, 4] , [5, 6]] nested list or 2D list
+    s[0][1] , s[2][1]               accessing nested list
+
+    s[-1] , s[-2]                   negetive index will read the list from last -1 is the last index of list
+
+    s[1] = 34                       lists are mutable i.e. we can change the content of a list                 
+    s[4] = 0
+
+    print([1,2,3] + [4,5,6])        concatenating lists
+    >>> [1, 2, 3, 4, 5, 6]
+    print([2]*4)                    The * operator repeats a list for the given number of times
+    >>> [2, 2, 2, 2]
+
+LIST METHODS AND OPERATIONS
+    s = [1, 2, 3, 4, 5, 6]
+
+    max(s)  |  min(s)   
+
+    s.append(7)                     Add value at the end of the list
+    s.append('hi')
+
+    b = [7, 8, 9]
+    s.extend(b)                     add all elements of list b in list a 
+
+    s.insert(1, 5)                  this insert 5 (arg2) at 1st index (arg1) of list s and all other elements shift to right
+    s[3:3] = [5, 7]                 another way of inserting by using list slicing type method, with this we can insert any number of elements but should always be in form of a list
+
+    del s[2]                        delete element in 2nd index of list
+    del s[3:7]                      delete multiple elements this will delete el 3rd to 6th index elements 
+    del s                           delete whole list 
+    
+    s.clear()                       clear all the elements from the list
+    s.remove(5)                     remove 5 from list (5 is element not index) if multiple same element exist then it remove only 1st occurence
+    s.pop(5)                        remove element at INDEX 5
+    s.pop()                         remove the last element
+    s[3:7] = []                     remove el from index 3 to 6 by assigning it to empty list
+
+    s.index(5)                      returns the index of element 5 in list only first occurence
+    s.count(5)                      returns the count of the number of items passed as an argument
+    
+    s.sort()                        sort items in a list in ascending order
+    s.reverse()                     reverse the order of items in the list
+
+COPYING A LIST
+    s = [1,2,3]
+    a = s 
+    here the list a will have all content of s so we have copied list s to a
+    Howerver, there is one problem with copying lists in this way. If you modify new_list, old_list is also modified. It is because the new list is referencing or pointing to the same old_list object.
+
+    import copy
+    a = copy.copy(s)                The copy() method returns a new list. It doesn't modify the original list  // SHALLOW COPY
+    
+    a = s.copy()
+
+    a = s[3:8]                      copying using slicing // no change in a if s changed
+    a = s[:]                        copy whole list
+
+LIST COMPREHENSION
+
+    List comprehension is an elegant and concise way to create a new list from an existing list in Python
+    A list comprehension consists of an expression followed by 'for statement' inside square brackets
+    A list comprehension can optionally contain more for or if statements, An optional if statement can filter out items for the new list
+
+    pow2 = [2 ** x for x in range(10)]
+    print(pow2)
+
+    odd = [x for x in range(20) if x % 2 == 1]      this make a list of odd numbers before 20
+
+CHECKING AN ELEMENT IN LIST
+
+    print(3 in s)                       Returns true or false depends on if element is in list or not
+    print(100 not in s)
+    print('s' in s)
+
+    a = [100, 100, 20, 20, 1, 3, 5, 1]
+    print(set(a))
+    >> [1,3,5,20,100]                   set will remove repeated elements 
+
+ITERATING THROUGH A LIST
+    for x in s:
+        print(x)
+
+    l1 = [1,2,3,4,5,6,7,8,9]
+    l2 = [10,11,12,13,14,15,16,17,18,19]
+
+    for i,j in zip(l1,l2):                  using zip we can iterate through 2 1D lists at a same time 
+        print(i,j)                          provided that length of both lists is same otherwise it will run only till smallest list is over
+
+LIST INPUT FROM USER
+    
+    a = list(map(int, input().split()))                 list input when all in one line ex. 2 4 5 6 4 
+
+    lst = []
+    for i in range(0, n):                               using append when input \n
+        lst.append(int(input()))
+
+    lst1 = []
+    lst1 = [int(item) for item in input().split()]      using list comprehension
+
+2D LISTS
+
+    s = []
+    for i in range(3):                                  2D list Input from user in this case it is 3 x n where 3 are no. of rows
+        s.append(list(map(int, input().split())))
+
+    s1 = sum(s, [])                                     This converts 2d list to 1d list
+    print(s1)
+
+TUPLES IN PYTHON
+    tuples are immutable so we cannot change content of tuples
+
+    s = (1,2,3,4,5,6)
+    s = (1)                         this is not a tuple 
+    s = (1,)                        to make tuple with only one element use , after element
+    s = ()                          empty tuple
+    s = 1,2,3,4,5,6                 this is also a way to make tuple
+
+    print( (1,2) + (3,4) )          concatenating tuples
+    s = ((1,2),(3,4))               nested tuples
+
+    s = (1,)*5                      (1, 1, 1, 1, 1)
+
+    SLICING IN TUPLES
+        print(s[1:5])
+        print(s[::-1])
+        print(s[0:8:2])
+
+    del s                           deleting tuple 
+
+    len(s)                          return length of tuple
+
+    list1 = [0, 1, 2]
+    print(tuple(list1))             list to tuple
+    
+    print(tuple('STRING'))          string to tuple  //  ('S', 'T', 'R', 'I', 'N', 'G')
+
+    cmp(tuple1, tuple2)             cmp is used to compare tuples return 0 or 1
+    max(s)  |  min(s)
+
