@@ -1,0 +1,111 @@
+PYTHON STRINGS
+    3 ways to create string in PYTHON
+        1. s = "Hello"
+        2. s = 'Hello'
+        3. s = '''Hello'''  or even double quotes can be used
+    Accessing STRINGS
+        s[0] refers to first element
+        s[0:2] slicing string from 0th index till 1st index (n-1) in s[1:n]
+        s[1:10:2] slicing but increasing index by 2 each time here
+        
+        s[-1] refers to last element od string
+        s[::-1] reverse the string
+         0  1  2  3  4   -> INDEX    
+         H  E  L  L  0
+        -5 -4 -3 -2 -1   -> -ve Index
+
+ESCAPE SEQUENCES
+    s = 'Miku is the best girl'
+
+    \n      -> to new line
+    \t      -> tab spaces
+
+    to print \ we need to do 
+    print('Hello how are\\ you')       -> Hello how are\ you
+    
+    >>> print("This is \x48\x45\x58 representation")
+    This is HEX representation
+
+    Raw String to ignore escape sequence
+        print(r"This is \x48\x45\x58 \n representation")
+        This is \x48\x45\x58 \n representation
+
+STRING FORMAT
+
+    FORMATTING INTEGERS                                                 TO BINARY
+        >>> "Binary representation of {0} is {0:b}".format(12)
+        'Binary representation of 12 is 1100'
+        >>> "{0:b}".format(12)
+        '1100'
+
+    ROUND OFF                                                           ROUND OFF
+        >>> "One third is: {0:.3f}".format(1/3)
+        'One third is: 0.333'
+
+        x = 3.2145685
+        >>>"{0:.3f}".format(x)   only till 3 digits which we have provided in the format block
+        '3.214'
+
+    STRING ALINGMENT
+        >>> "|{:<10}|{:^10}|{:>10}|".format('butter','bread','ham')
+        '|butter    |  bread   |       ham|'
+
+        Using this we can left right or center aling our text using >< and 10 is the number of spaces provided in which we have to aling. If len of string is greater than 10 then it will print whole string and ALINGMENT is not considered.
+ 
+STRINGS OPERATIONS
+    s = 'Miku is the best girl'
+    Note: All string methods returns new values. They do not change the original string.
+
+    len(s)                        -> returns length of string
+    s.endswith('girl')            -> return true or false depending upon if string end with given argument
+    s.startswith('Mi')	          -> Returns true if the string starts with the specified value
+
+    s.count('i')                  -> give the count of argument in the string
+
+    s.upper() / s.lower()
+    s.capitalize()                -> make 1st alphabet of string capitalize
+    s.title()	                  -> Converts the first character of each word to upper case
+
+    s.find('is')                  -> returns index of argument in string and only 1st occurence else -1
+    s.find('i')
+    s.rfind('i')	              -> Searches the string for a specified value and returns the last position of where it was found 
+
+    s.replace('i' , '3')          -> replace arg1 in string with arg2 at all places
+    s.replace('i' , '3' , 2)      -> replace arg1 in string with arg2 only for first 2 (arg3) places 
+
+    x = s.split()                 -> this split the string and store all in a list x, by default it split by while spaces but we can change it in the arguments
+    s = ' '.join(x)               -> this join the list with whatever character we give it before join, into a string 
+
+    s.index('M')                  -> Searches the string for a specified value and returns the position of where it was found
+    s.rindex('i')                 -> Searches the string for a specified value and returns the last position of where it was found
+    
+    s.isalnum()	                  -> Returns True if all characters in the string are alphanumeric
+    s.isalpha()	                  -> Returns True if all characters in the string are in the alphabet
+    s.isascii()	                  -> Returns True if all characters in the string are ascii characters
+    s.isdecimal()	              -> Returns True if all characters in the string are decimals
+    s.isdigit()	                  -> Returns True if all characters in the string are digits
+    s.isnumeric()	              -> Returns True if all characters in the string are numeric
+
+    s.strip()
+        txt = ",,,,,rrttgg.....banana....r.arr"
+        print( txt.strip(",.grt") )
+        >>> banana....r.a
+
+        strip will strip all the things given in arguments from left and right but if it found a character which it dont need to strip it will not process further 
+        by default it strip white spaces if no arguments provided
+
+        x = txt.rstrip()	      -> strip from right
+        x = txt.lstrip()	      -> strip from left
+    
+    txt = "50"
+    print( txt.zfill(10) )        -> Fill the string with zeros until it is 10 (argument) characters long
+
+STRING TO LIST EACH CHARACTER
+    s = 'hello'
+    a = list(s.strip())
+    print(a)
+
+    >>> ['h', 'e', 'l', 'l', 'o']
+
+    joining list to form string
+    print(''.join(a)) 
