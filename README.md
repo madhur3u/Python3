@@ -3,7 +3,7 @@ This repository contains all .py files which I created and worked on while learn
 
 The repository contains basic files with comments to understand how to learn python while coding. The folders has been made and the files are uploaded in the folders depending upon the topic in Python.  
 
-The files has been made using ATOM file editor and executed in **Linux Terminal**.  
+The files has been made using VS Code and executed in **Linux Terminal**.  
 >python3 ex1.py  
 
 ## LIST OF FOLDERS
