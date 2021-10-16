@@ -15,7 +15,7 @@ def minion_game(s):
         # like this we will get no. of substrings starting from that point
         # and since we are accounting for all substrings starting from vowel in that word
         # we will have all repetitions in the count, so no need to do anything extra for that
-        if s[i] in ['A', 'E', 'I', 'O', 'U']:
+        if s[i] in {'A', 'E', 'I', 'O', 'U'}:
             K_substr += (n - i)
         
         # same as above 
