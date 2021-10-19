@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/py-collections-namedtuple/problem
+
 from collections import namedtuple
 
 n = int(input())
